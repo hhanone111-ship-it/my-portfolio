@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 20% 98%;
+    --foreground: 215 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 18%;
+
+    --primary: 215 20% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 215 25% 55%;
+
+    --secondary: 215 15% 96%;
+    --secondary-foreground: 215 25% 18%;
+
+    --muted: 215 15% 94%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 215 15% 95%;
+    --accent-foreground: 215 25% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 15% 88%;
+    --input: 215 15% 90%;
+    --ring: 215 20% 40%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 215 20% 90%;
+
+    --card: 215 28% 10%;
+    --card-foreground: 215 20% 90%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 215 20% 90%;
+
+    --primary: 215 25% 75%;
+    --primary-foreground: 215 30% 8%;
+    --primary-glow: 215 30% 85%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 215 20% 90%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 25% 20%;
+    --accent-foreground: 215 20% 90%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 22%;
+    --input: 215 20% 20%;
+    --ring: 215 25% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow;
+  }
+  
+  .glass {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50 shadow-sm;
+  }
+  
+  .card-minimal {
+    @apply bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/50;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
