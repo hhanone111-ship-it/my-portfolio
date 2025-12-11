@@ -71,7 +71,7 @@ const Contact = () => {
 
                 {/* LINKEDIN */}
                 <a
-                  href="https://linkedin.com/in/han-huynh"
+                  href="https://www.linkedin.com/in/han-huynh-phuc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
