@@ -15,7 +15,7 @@ const projects = [
     ],
     period: "2024 – 2025",
     organization: "Seattle Pacific University",
-    github: "https://github.com/The-Rogues/RoguesProject",
+    github: "https://github.com/yourusername/roguelike-deckbuilder",
     demo: ""
   },
   {
@@ -127,7 +127,7 @@ const Projects = () => {
 
   <div className="flex gap-3">
     {project.github && (
-      <a
+      
         href={project.github}
         target="_blank"
         rel="noopener noreferrer"
@@ -138,7 +138,7 @@ const Projects = () => {
       </a>
     )}
     {project.demo && (
-      <a
+      
         href={project.demo}
         target="_blank"
         rel="noopener noreferrer"

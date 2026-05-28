@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card";
-import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -15,7 +14,7 @@ const projects = [
     ],
     period: "2024 – 2025",
     organization: "Seattle Pacific University",
-    github: "https://github.com/The-Rogues/RoguesProject",
+    github: "https://github.com/yourusername/roguelike-deckbuilder",
     demo: ""
   },
   {
@@ -30,8 +29,7 @@ const projects = [
     ],
     period: "Jul 2025 – Sep 2025",
     organization: "FPT Software",
-    github: "",
-    demo: ""
+    github: "
   },
   {
     title: "Bookstore Program",
@@ -43,9 +41,7 @@ const projects = [
       "Managed project timeline effectively"
     ],
     period: "May 2024",
-    organization: "Seattle Pacific University",
-    github: "",
-    demo: ""
+    organization: "Seattle Pacific University"
   },
   {
     title: "Student Management System",
@@ -57,9 +53,7 @@ const projects = [
       "Collaborated with peers for iterative design"
     ],
     period: "Dec 2023",
-    organization: "South Seattle College",
-    github: "",
-    demo: ""
+    organization: "South Seattle College"
   }
 ];
 
@@ -113,43 +107,16 @@ const Projects = () => {
                     ))}
                   </ul>
 
-                  <div className="mt-auto">
-  <div className="flex flex-wrap gap-2 mb-4">
-    {project.technologies.map((tech) => (
-      <span
-        key={tech}
-        className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
-      >
-        {tech}
-      </span>
-    ))}
-  </div>
-
-  <div className="flex gap-3">
-    {project.github && (
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
-      >
-        <Github size={14} />
-        GitHub
-      </a>
-    )}
-    {project.demo && (
-      <a
-        href={project.demo}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
-      >
-        <ExternalLink size={14} />
-        Live demo
-      </a>
-    )}
-  </div>
-</div>
+                  <div className="mt-auto flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

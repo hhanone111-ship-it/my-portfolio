@@ -15,7 +15,7 @@ const projects = [
     ],
     period: "2024 – 2025",
     organization: "Seattle Pacific University",
-    github: "https://github.com/The-Rogues/RoguesProject",
+    github: "https://github.com/yourusername/roguelike-deckbuilder",
     demo: ""
   },
   {
